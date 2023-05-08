@@ -7,7 +7,7 @@ app.use("/", require("./routes/root"));
 app.use(express.json())
 app.all("*", (req, res) => {
   res.status(404);
-  if (req.accepts("html")) {
+  if (req.accepts("html m ")) {
     res.sendFile(path.join(__dirname, "views", "404.html"));
   } else if (req.accepts("json")) {
     res.json({ message: "404 Not Found" });
